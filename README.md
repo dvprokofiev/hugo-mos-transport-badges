@@ -67,7 +67,7 @@
 
 * SVG иконки метро и МЦД взяты с [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Line_numbers_of_Moscow_Metro) и являются общественным достоянием.
 * Код модуля (шорткоды, шаблоны и CSS) распространяется по лицензии [MIT License](LICENSE).
-* Код написан Google Antigravity и слегка доработан @dvprokofiev.
+* Код по большому счету написан Google Antigravity.
 
 ---
 
@@ -75,7 +75,7 @@
 
 A simple, zero-JavaScript Hugo module that lets you easily insert crisp SVG icons for Moscow's metro lines and transport hubs right into Hugo Markdown articles.
 
-Instead of writing custom HTML or dealing with blurry images, just use a shortcode: 
+Just use a shortcode: 
 `Transfer to {{< mos-transport "m5" >}} Koltsevaya line.`
 
 ## 📦 How to install
@@ -140,3 +140,4 @@ If you're building a custom page layout (like a header or a station directory) a
 
 * The SVG icons for the Metro and MCD lines are public domain assets sourced from [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Line_numbers_of_Moscow_Metro).
 * The module code (shortcodes, templates, and CSS) is released under the [MIT License](LICENSE).
+* Code was written by Google Antigravity
