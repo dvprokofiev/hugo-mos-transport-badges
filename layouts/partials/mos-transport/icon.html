@@ -1,0 +1,29 @@
+{{- /*
+  Partial: mos-transport/icon.html
+  Renders an inline SVG badge for a Moscow transport line.
+
+  Params (dict):
+    .id — line identifier: m1–m16, mck, d1–d5
+*/ -}}
+
+{{- $id := .id -}}
+{{- $path := "" -}}
+
+{{- if eq $id "mck" -}}
+  {{- $path = "mos-transport/mck/14.svg" -}}
+{{- else if hasPrefix $id "m" -}}
+  {{- $num := strings.TrimPrefix "m" $id -}}
+  {{- $path = printf "mos-transport/metro/%s.svg" $num -}}
+{{- else if hasPrefix $id "d" -}}
+  {{- $path = printf "mos-transport/mcd/%s.svg" $id -}}
+{{- end -}}
+
+{{- $icon := resources.Get $path -}}
+{{- if $icon -}}
+  <span class="mos-transport-badge" aria-label="{{ $id }}">
+    {{- $icon.Content | safeHTML -}}
+  </span>
+{{- else -}}
+  {{- warnf "mos-transport: icon '%s' not found at '%s'" $id $path -}}
+  <span class="mos-transport-badge mos-transport-missing">[{{ $id }}]</span>
+{{- end -}}

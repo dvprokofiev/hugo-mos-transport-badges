@@ -1,0 +1,21 @@
+/* mos-transport badge — inline SVG icon styling */
+.mos-transport-badge {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  gap: 0.15em;
+  line-height: 1;
+}
+
+.mos-transport-badge svg {
+  height: 1.2em;
+  width: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.mos-transport-missing {
+  color: #c00;
+  font-style: italic;
+  font-size: 0.85em;
+}

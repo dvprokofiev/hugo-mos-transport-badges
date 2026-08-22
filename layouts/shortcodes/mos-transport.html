@@ -1,0 +1,9 @@
+{{- /*
+  Shortcode: mos-transport
+  Usage: {{</* mos-transport "m1" */>}}
+
+  Params:
+    0 — line/transport ID (m1–m16, mck, d1–d5)
+*/ -}}
+{{- $id := .Get 0 -}}
+{{- partial "mos-transport/icon.html" (dict "id" $id) -}}
