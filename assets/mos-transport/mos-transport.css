@@ -1,13 +1,13 @@
 .mos-transport-badge {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 0.1em;
+  display: inline;
 }
 
 .mos-transport-badge svg {
   height: 1.2em;
-  width: auto;
-  display: block;
+  width: 1.2em;
+  display: inline-block;
+  vertical-align: -0.2em;
+  margin: 0 0.1em;
 }
 
 .mos-transport-missing {
