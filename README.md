@@ -24,7 +24,7 @@
    ```html
    {{ $css := resources.Get "mos-transport/mos-transport.css" }}
    {{ with $css }}
-     <style>{{ .Content | safeCSS }}</style>
+     <link rel="stylesheet" href="{{ .RelPermalink }}">
    {{ end }}
    ```
 
@@ -97,7 +97,7 @@ Just use a shortcode:
    ```html
    {{ $css := resources.Get "mos-transport/mos-transport.css" }}
    {{ with $css }}
-     <style>{{ .Content | safeCSS }}</style>
+     <link rel="stylesheet" href="{{ .RelPermalink }}">
    {{ end }}
    ```
 
