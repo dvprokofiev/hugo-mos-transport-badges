@@ -21,7 +21,12 @@
 {{- $icon := resources.Get $path -}}
 {{- if $icon -}}
   <span class="mos-transport-badge" aria-label="{{ $id }}">
-    {{- $icon.Content | safeHTML -}}
+    {{- /* 
+      Isolate SVG's styles, adding, for example
+      `d4` to the `st0`
+    */ -}}
+    {{- $uniqueContent := replaceRE `st([0-9]+)` (printf "st$1-%s" $id) $icon.Content -}}
+    {{- $uniqueContent | safeHTML -}}
   </span>
 {{- else -}}
   {{- warnf "mos-transport: icon '%s' not found at '%s'" $id $path -}}
