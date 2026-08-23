@@ -3,8 +3,8 @@
 }
 
 .mos-transport-badge svg {
-  height: 0.9px;
-  width: 0.9px;
+  height: 0.9em;
+  width: 0.9em;
   display: inline-block;
   vertical-align: -0.2em;
   margin: 0 0.1em;
